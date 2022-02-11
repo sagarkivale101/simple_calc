@@ -12,7 +12,7 @@ function calc() {
   }
 }
 
-function cl() {
+function cl() {asd
   screen.value = "";
 }
 
