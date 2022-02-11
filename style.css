@@ -5,6 +5,15 @@
   background-color: #ecf0f3;
   font-family: san-serif;
   outline: none;
+  border: 1px solid black;
+}
+
+button {
+  height: 50px;
+  color: white;
+  background-color: black;
+  font-size: 17px;
+  border: 0.5px solid white;
 }
 
 .container {
@@ -26,10 +35,11 @@
 input {
   grid-column: span 4;
   height: 70px;
-  width: 260px;
+  width: 278px;
   font-size: 30px;
   text-align: end;
-  border: none;
+  border: 1px solid black;
+  border-radius: 15px 15px 0 0;
   margin: auto;
 }
 
