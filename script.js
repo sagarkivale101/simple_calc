@@ -2,11 +2,50 @@ let screen = document.getElementById("output-screen");
 document.onkeydown = function (e) {
  return false;
 };
+
+let op = '+-/*'
+let ns = "1234567890";
+
 function disp(num) {
-  screen.value += num;
+  if(screen.value == '3.141592653589793' && num == '3.141592653589793'){
+   alert('cannot enter π after π, Enter operator after π')
+  }else if(screen.value == '3.141592653589793' && parseInt(num) >= 0 && parseInt(num) <=9 ){
+  alert('Enter operator after π (+-*/)');
+  }
+  else{
+    // console.log((parseInt(num)) );  
+    screen.value += num;
+
+    }
+   
+  
 }
 
+function myFunction() {
 
+  var btn = document.getElementById("neg");
+  
+  if (btn.value == "--") {
+      btn.value = "++";
+      btn.innerHTML = "++";
+  }
+  else {
+      btn.value = "--";
+      btn.innerHTML = "--";
+  }
+
+
+}
+
+function dispneg(){
+  var btn = document.getElementById("neg");
+  if(btn.value == "--"){
+    screen.value += '-';
+  }else{
+    screen.value += '+';
+    
+  }
+}
 
 function calc() {
   if(screen.value.slice(0,1) == '√'){
