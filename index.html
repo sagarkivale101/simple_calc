@@ -11,6 +11,7 @@
 		<div class="container">
 			<div class="calculator">
 				<input type="text" placeholder="0" id="output-screen" />
+				<button onClick="rev()" id="rev">REV</button>
 
 				<button onClick="del()">DEL</button>
 				<button onClick="disp('(')">(</button>
@@ -18,25 +19,29 @@
 				<button onClick="disp('%')">%</button>
 				<button onClick="cl()">cl</button>
 
+				<button id="sin" onClick="disp('sin(')" value="sin">sin</button>
+
 				<button onClick="disp('^')">x^y</button>
 				<button onClick="disp('7')">7</button>
 				<button onClick="disp('8')">8</button>
 				<button onClick="disp('9')">9</button>
 				<button onClick="disp('/')">/</button>
-
+				<button id="cos" onClick="disp('cos(')" value="cos">cos</button>
 				<button onClick="disp('√')">√x</button>
 				<button onClick="disp('4')">4</button>
 				<button onClick="disp('5')">5</button>
 				<button onClick="disp('6')">6</button>
 				<button onClick="disp('*')">*</button>
+				<button onClick="disp('tan(')" id="tan" value="tan">tan</button>
 
 				<button onClick="disp('!')">x!</button>
 				<button onClick="disp('1')">1</button>
 				<button onClick="disp('2')">2</button>
 				<button onClick="disp('3')">3</button>
 				<button onClick="disp('-')" id="neg">-</button>
+				<button onClick="disp('2.71828182846')" id="ee" class="ee" value="cot">e</button>
 
-				<button onClick="disp('3.141592653589793')" class="pi">π</button>
+				<button onClick="disp('3.141592653589793')">π</button>
 				<!-- <button onClick="dispneg()" id="neg">-</button>
 				<button onClick="myFunction()" id="myButton" value="Open Curtain" class="pi">π</button> -->
 				<button onClick="disp('0')">0</button>

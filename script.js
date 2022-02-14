@@ -21,33 +21,63 @@ function disp(num) {
   
 }
 
-function myFunction() {
-
-  var btn = document.getElementById("neg");
+function rev(){
+  var cosbtn = document.getElementById("cos");
+  var sinbtn = document.getElementById("sin");
+ 
+  var tanbtn = document.getElementById("tan");
+  var cotbtn = document.getElementById("cot");
   
-  if (btn.value == "--") {
-      btn.value = "++";
-      btn.innerHTML = "++";
-  }
-  else {
-      btn.value = "--";
-      btn.innerHTML = "--";
+
+
+  if(sinbtn.value == "sin"){
+   sinbtn.value = "sin^-1"
+   sinbtn.innerHTML = "sin^-1"
+   }else {
+    sinbtn.value = "sin"
+    sinbtn.innerHTML = "sin"
   }
 
 
+  if(cosbtn.value == "cos"){
+    cosbtn.value = "cos^-1"
+    cosbtn.innerHTML = "cos^-1"
+    }
+    else {
+      cosbtn.value = "cos"
+      cosbtn.innerHTML = "cos"
+   }
+
+
+  if(tanbtn.value == "tan"){
+    tanbtn.value = "tan^-1"
+    tanbtn.innerHTML = "tan^-1"
+    }else {
+      tanbtn.value = "tan"
+      tanbtn.innerHTML = "tan"
+   }
+ 
+   if(cotbtn.value == "cot"){
+    cotbtn.value = "cot^-1"
+    cotbtn.innerHTML = "cot^-1"
+     }
+     else {
+      cotbtn.value = "cot"
+      cotbtn.innerHTML = "cot"
+    }
 }
 
+
+
 function dispneg(){
-  var btn = document.getElementById("neg");
-  if(btn.value == "--"){
-    screen.value += '-';
-  }else{
-    screen.value += '+';
-    
-  }
+ 
 }
 
 function calc() {
+  var sinbtn = document.getElementById("sin");
+  var tanbtn = document.getElementById("tan");
+  var cosbtn = document.getElementById("cos");
+
   if(screen.value.slice(0,1) == '√'){
     
     var x =+screen.value.slice(1,)
@@ -67,7 +97,31 @@ function calc() {
           
         screen.value = b
 
-  }else{
+  }else if(screen.value.slice(0, 3) == 'cos' && cosbtn.value == "cos^-1"){
+    
+   screen.value = Math.acos(screen.value.slice(4, ))
+  }else if(screen.value.slice(0, 3) == 'sin' && sinbtn.value == "sin^-1"){
+    
+    screen.value = Math.asin(screen.value.slice(4, ))
+   }else if(screen.value.slice(0, 3) == 'tan' && tanbtn.value == "tan^-1"){
+    console.log("atan");
+    screen.value = Math.atan(screen.value.slice(4, ))
+   }
+  else if(screen.value.slice(0, 3) == 'cos'){
+ 
+    screen.value = Math.cos(screen.value.slice(4, ))
+  }
+  else if(screen.value.slice(0, 3) == 'tan'){
+ 
+    screen.value = Math.tan(screen.value.slice(4, ))
+  }else if(screen.value.slice(0, 3) == 'sin'){
+    
+    screen.value = Math.sin(screen.value.slice(4, ))
+  }
+ 
+    
+  
+  else{
       try {
         screen.value = eval(screen.value);
       } catch (error) {
