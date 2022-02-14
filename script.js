@@ -1,5 +1,7 @@
 let screen = document.getElementById("output-screen");
-
+document.onkeydown = function (e) {
+ return false;
+};
 function disp(num) {
   screen.value += num;
 }
